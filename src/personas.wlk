@@ -15,6 +15,9 @@ object olivia {
 		concentracion = concentracion - 1
 	}
 
+	method vapor() {
+	}
+
 }
 
 // BRUNO
@@ -68,11 +71,11 @@ object ramiro {
 	var pielGrasa = false
 	var contracturado = 0
 
-	method recibeMasaje() {					// ver que toma negativos 
-		if (contracturado > 2) {
-			contracturado = contracturado - 2
+	method recibeMasaje() {
+		contracturado = contracturado - 2 // ver que toma negativos y nose por que???? 
+		if (contracturado < 0) {
+			contracturado = 0
 		}
-		contracturado = 0
 	}
 
 	method vapor() {
@@ -81,7 +84,7 @@ object ramiro {
 
 	method comerBigMag() {
 		pielGrasa = true
-		}
+	}
 
 	method trabajar() {
 		pielGrasa = true
@@ -103,10 +106,15 @@ object ramiro {
 //-----------  SPA  -----------------------------
 object spa {
 
+	var ultimo			// no inicializo la variable para no farmatearla como string y que tomo el proximo que viene
+
 	method atender(_persona) {
 		_persona.recibeMasaje()
 		_persona.vapor()
+		if (_persona == ultimo) {
+			_persona.recibeMasaje()
+		}
+		ultimo = _persona
 	}
 
 }
-
