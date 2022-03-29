@@ -54,7 +54,7 @@ object bruno {
 	}
 
 	method estaPerfecto() {
-		return feliz and not sed and (peso > 50000 and peso < 70000)
+		return feliz and not sed and (peso.between(50000, 70000)) // between para valores entre y tambien  puedo definir los pesos min y max para la felicidad y cambiarlos en el futuro
 	}
 
 	method mediodiaEnCasa() {
@@ -106,7 +106,7 @@ object ramiro {
 //-----------  SPA  -----------------------------
 object spa {
 
-	var ultimo			// no inicializo la variable para no farmatearla como string y que tomo el proximo que viene
+	var ultimo // no inicializo la variable para no farmatearla como string y que tomo el proximo que viene
 
 	method atender(_persona) {
 		_persona.recibeMasaje()
@@ -118,3 +118,4 @@ object spa {
 	}
 
 }
+
