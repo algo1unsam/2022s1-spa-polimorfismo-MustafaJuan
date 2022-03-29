@@ -76,6 +76,9 @@ object ramiro {
 		if (contracturado < 0) {
 			contracturado = 0
 		}
+//method recibeMasaje() {
+//	contractura=contractura - 2
+//	contractura.max(0)     esta funcion devuelve el maxino entre contractura y el numero 0 cero
 	}
 
 	method vapor() {
